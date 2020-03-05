@@ -8,6 +8,11 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+    :javascript
+      audiojs.events.ready(function() {
+        var as = audiojs.createAll();
+      });
+
     %header.header
       .header-icon
         %a{href: root_path}
