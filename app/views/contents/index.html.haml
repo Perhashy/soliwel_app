@@ -7,19 +7,14 @@
       = link_to "ホームへ", root_path, class: "side-home"
   .main
     .content
-      .content-user
-        Hashy
-      .content-music
-        = audio_tag 'E0$-3-罪.wav', class: "content-music__box"
-      .content-text
-        初投稿です
-    .content
-      .content-user
-        Hashy
-      .content-music
-        = audio_tag 'E0$-3-罪.wav', class: "content-music__box"
-      .content-text
-        初投稿です
+      - @contents.each do |content|
+        .content-user
+          = content.title
+        .content-music
+          -# = audio_tag content.music, class: "content-music__box"
+          -# = content.music
+        .content-text
+          = content.text
 
 
 
