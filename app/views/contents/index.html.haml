@@ -1,0 +1,24 @@
+.wrapper
+  .side
+    .side-form
+      %input{name: "name", type: "text", class: "side-form__input"}
+      %input{type: "submit", value: "検索", class: "side-form__submit"}
+    .side-home
+      = link_to "ホームへ", root_path, class: "side-home"
+  .main
+    .content
+      .content-user
+        Hashy
+      .content-music
+        %audio{controls: "", class: "content-music__box"}
+          %source{src: ""}
+      .content-text
+        初投稿です
+    .content
+      .content-user
+        Hashy
+      .content-music
+        %audio{controls: "", class: "content-music__box"}
+          %source{src: ""}
+      .content-text
+        初投稿です
